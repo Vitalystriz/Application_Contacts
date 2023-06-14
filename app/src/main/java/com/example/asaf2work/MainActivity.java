@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Edit.class);
                 intent.putExtra("Name", lastSelected.getName());
                 intent.putExtra("PhoneNumber", lastSelected.getPhonenumber());
-                intent.putExtra("bitmap", Bitmap.createScaledBitmap(lastSelected.getPicture(),300,300,false));
+                intent.putExtra("bitmap", Helper.bitmapToByteArray(lastSelected.getPicture()));
 
                 startActivityForResult(intent, 0);
 
